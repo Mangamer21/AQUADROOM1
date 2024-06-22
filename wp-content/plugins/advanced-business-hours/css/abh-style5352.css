@@ -1,0 +1,233 @@
+/*
+ * Advanced Business Hours Widget
+ * Author: Dolatabadi
+ * Version: 1.6.0
+ */
+.abh-wrapper {
+	background-color: #fff;
+	border: 1px solid #eee;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* apply border-box in case the theme doesn't set it by default */
+.abh-header,
+.abh-body,
+.abh-footer,
+.abh-body .hours-data,
+.abh-body .hours-data .count-col {
+	box-sizing: border-box;
+}
+
+/* widget header */
+.abh-header {
+	background-color: #fe6e4e;
+	color: #fff;
+	padding: 20px;
+	clear: both;
+	display: block;
+	width: 100%;
+	height: 140px;
+	position: relative;
+}
+
+/* today's data */
+.abh-header .today-data {
+	float: left;
+	text-align: center;
+	margin-top: 5px;
+}
+
+/* today months */
+.abh-header .today-data span.month {
+	display: block;
+	font-size: 1.7em;
+}
+
+/* today day number */
+.abh-header .today-data span.day-number {
+	display: block;
+	font-size: 4em;
+	line-height: 0.9;
+}
+
+/* today day name */
+.abh-header .today-data span.day-name {
+	display: block;
+	font-size: 1.3em;
+	text-transform: uppercase;
+}
+
+/* calendar image */
+.abh-header .calendar-img {
+	width: 100px;
+	float: right;
+}
+
+.abh-header .calendar-img img {
+	max-width: 100%;
+}
+
+/* custom calendar image */
+.abh-header .custom-cal {
+	width: 100px;
+	float: right;
+}
+
+.abh-header .custom-cal .fa {
+	font-size: 90px;
+	width: 100%;
+}
+
+.abh-header .today-holiday {
+	text-align: center;
+	display: block;
+}
+
+.abh-header .holiday-name {
+	margin: 0 auto;
+	display: block;
+	font-size: 2em;
+	line-height: 0.9;
+}
+
+.abh-header .holiday-day {
+	padding-top: 5px;
+	display: block;
+	font-style: italic;
+}
+
+.abh-header .holiday-msg {
+	padding-top: 10px;
+	display: block;
+	font-style: italic;
+}
+
+/* widget main body */
+.abh-body {
+	display: inline-block;
+	color: #486060;
+	background-color: #fff;
+	padding: 20px;
+	width: 100%;
+}
+
+/* business hours data */
+.abh-body .hours-data {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+/* closed status badge */
+.abh-body .closed-status {
+	background-color: #fe6e4e;
+	padding: 3px 5px;
+	border-radius: 5px;
+	color: #fff;
+	margin-left: 10px;
+	font-weight: normal;
+}
+
+/* open status badge */
+.abh-body .open-status {
+	background-color: #c5d92b;
+	padding: 3px 5px;
+	border-radius: 5px;
+	color: #fff;
+	margin-left: 10px;
+	font-weight: normal;
+}
+
+.abh-body .hours-data .pull-left {
+	float: left;
+}
+
+.abh-body .hours-data .pull-right {
+	float: right;
+}
+
+/* columns */
+.abh-body .hours-data .count-col {
+	border-bottom: 1px dashed #e8e8e8;
+	position: relative;
+	min-height: 1px;
+	width: 100%;
+	font-weight: bold;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* border for columns */
+.abh-body .hours-data .border {
+	border-right: 2px solid #fff;
+}
+
+/* count */
+.abh-body .hours-data .count {
+	display: block;
+	font-weight: normal;
+}
+
+/* widget footer */
+.abh-footer {
+	background-color: #f8f4f1;
+	display: block;
+	width: 100%;
+	min-height: 50px;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Closing and opening countdown */
+#closing-countdown, #opening-countdown {
+	display: inline;
+}
+
+.abh-spinner {
+	width: 40px;
+	height: 40px;
+
+	position: relative;
+	margin: 100px auto;
+}
+
+.abh-double-bounce1, .abh-double-bounce2 {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #d0d0d0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	-webkit-animation: abh-bounce 2.0s infinite ease-in-out;
+	animation: abh-bounce 2.0s infinite ease-in-out;
+}
+
+.abh-double-bounce2 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+@-webkit-keyframes abh-bounce {
+	0%, 100% {
+		-webkit-transform: scale(0.0)
+	}
+	50% {
+		-webkit-transform: scale(1.0)
+	}
+}
+
+@keyframes abh-bounce {
+	0%, 100% {
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	}
+	50% {
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+	}
+}
